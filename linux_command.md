@@ -26,4 +26,4 @@ grep -r 'coco' ./train.log
 ```bash
 grep -r 'coco' /var/* [--include '*.pth']
 ```
-- `include` 옵션으로 특정 확장자만 지정하여 검색할 수도 있다.
+> `include` 옵션으로 특정 확장자만 지정하여 검색할 수도 있다.
