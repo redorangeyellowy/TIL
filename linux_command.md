@@ -61,3 +61,30 @@ du -sh .
 ```bash
 du -h --max-depth=2 /database2/database
 ```
+
+## 스크린
+1. 설치
+```bash
+sudo apt-get install screen
+```
+2. 사용법
+- `test`라는 스크린 만들기
+```bash
+screen -S test
+```
+- 스크린 목록 보기
+```bash
+screen -ls
+```
+- 스크린 접속하기
+```bash
+screen -r [session name]
+```
+- 스크린 종료하기
+```
+ctrl + a + d
+```
+- 스크린 삭제하기
+```bash
+screen -X -S [session name] kill
+```
