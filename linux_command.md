@@ -88,3 +88,14 @@ ctrl + a + d
 ```bash
 screen -X -S [session name] kill
 ```
+
+## 실행 결과를 파일로 저장 : Redirection(재지향)
+- 일반적으로 명령어를 실행하면 화면에 출력해주는 것에 그치는데, redirection 개념을 사용해 실행 결과를 파일에 저장할 수 있다.
+- 예시 1: `train.py` 실행 결과를 `test.txt` 파일에 저장하기 (단, 에러 메시지는 저장되지 않음.)
+```bash
+python train.py > test.txt
+```
+- 예시 2: `test.py` 실행 결과를 **에러 메시지**를 포함하여 `test2.txt` 파일에 저장하기.
+```bash
+python test.py > test2.txt
+```
