@@ -99,3 +99,13 @@ python train.py > test.txt
 ```bash
 python test.py > test2.txt
 ```
+
+## GPU 관련
+1. 1초마다 GPU 상태 모니터링
+```bash
+watch -n 1 nvidia-smi
+```
+2. 그래픽카드 이름 확인
+```bash
+nvidia-smi --query | fgrep 'Product Name'
+```
