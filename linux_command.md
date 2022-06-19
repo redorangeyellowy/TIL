@@ -109,3 +109,9 @@ watch -n 1 nvidia-smi
 ```bash
 nvidia-smi --query | fgrep 'Product Name'
 ```
+
+3. 사용자별 GPU 사용현황 확인
+```bash
+pip install gpustat
+gpustat -i
+```
