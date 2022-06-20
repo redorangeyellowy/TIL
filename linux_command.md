@@ -100,7 +100,7 @@ python train.py > test.txt
 python test.py > test2.txt
 ```
 
-## GPU 관련
+## GPU 관리
 1. 1초마다 GPU 상태 모니터링
 ```bash
 watch -n 1 nvidia-smi
@@ -112,6 +112,47 @@ nvidia-smi --query | fgrep 'Product Name'
 
 3. 사용자별 GPU 사용현황 확인
 ```bash
-pip install gpustat
+pip install gpustat # 설치
 gpustat -i
+```
+## 인터넷에서 파일 다운로드
+1. 기본 사용법
+```bash
+wget [download_url]
+```
+2. 다른 이름으로 다운로드
+```bash
+wget -O target.zip [download_url]
+```
+3. 다운로드 속도 지정
+```bash
+wget --limit-rate=200k [download_url]
+```
+4. 이어받기
+```bash
+wget -c [download_url]
+```
+5. 백그라운드에서 다운로드
+```bash
+wget -b [download_url]
+```
+6. 다운로드 가능 여부 확인
+```bash
+wget --spider [download_url]
+```
+7. 재시도 횟수 지정
+```bash
+wget --tries=50 [download_url]
+```
+8. 특정 파일 타입만 다운로드
+```bash
+wget -r -A.pdf [download_url] # pdf만 다운로드
+```
+9. 제외하려는 파일 타입 지정
+```bash
+wget --reject=pdf [download_url]
+```
+10. 로그 기록
+```bash
+wget -o download.log [download_url]
 ```
