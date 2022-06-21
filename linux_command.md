@@ -115,6 +115,7 @@ nvidia-smi --query | fgrep 'Product Name'
 pip install gpustat # 설치
 gpustat -i
 ```
+
 ## 인터넷에서 파일 다운로드
 1. 기본 사용법
 ```bash
@@ -155,4 +156,18 @@ wget --reject=pdf [download_url]
 10. 로그 기록
 ```bash
 wget -o download.log [download_url]
+```
+
+## 파일 및 폴더 개수 확인
+1. 현재 위치에서의 폴더 개수 확인
+```bash
+ls -l | grep ^d | wc -l
+```
+2. 현재 위치에서의 파일 개수 확인
+```bash
+ls -l | grep ^- | wc -l
+```
+3. 현재 위치 하위 디렉토리의 파일 개수 확인
+```bash
+find . -type f | wc -l
 ```
