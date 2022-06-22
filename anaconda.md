@@ -1,6 +1,36 @@
 # Anaconda (아나콘다) 명령어 정리
 자주 쓰지는 않지만 알아두면 유용한 명령어들을 정리하였다.
 
+## 가상환경 관련
+1. 설치된 패키지 목록 확인
+```bash
+conda list
+```
+2. 단일 패키지 설치
+```bash
+conda install numpy
+```
+3. 여러 패키지 설치
+```bash
+conda install numpy matplotlib
+```
+4. 단일 패키지 업데이트
+```bash
+conda update numpy
+```
+5. 설치된 패키지 모두 업데이트
+```bash
+conda upgrade --all
+```
+6. 패키지 제거
+```bash
+conda remove numpy
+```
+7. 설치된 패키지 검색
+```bash
+conda search '*numpy*'
+```
+
 ## Export, import, clone
 기존에 사용하고 있던 아나콘다 가상환경을 다른 머신에서 사용하고 싶을 때, 혹은 별도의 동일한 가상환경을 만들고 싶을 때 유용한 명령어들이다.
 1. Export
